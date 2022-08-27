@@ -1,6 +1,8 @@
 import { useState} from 'react';
 import './App.css';
 
+/* eslint no-eval: 0 */
+
 const App = () => {
   const [result, setResult] = useState("")
 const  handleClick = (e) => {
