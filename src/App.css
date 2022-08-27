@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-size: 27px;
   font-family: 'Courier New', Courier, monospace;
-
 }
 
 html {
@@ -12,15 +11,14 @@ html {
 }
 
 body {
-
   background-repeat: no-repeat;
   background-attachment: fixed;
-background: linear-gradient(white, #9198e5);    
+  background: linear-gradient(white, #9198e5);    
 }
 
 
 .container {
-max-width: 300px;
+  max-width: 300px;
   margin: 15vh auto 0 auto;
   background-color: black;
   border-radius: 15px;

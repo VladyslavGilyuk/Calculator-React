@@ -4,31 +4,33 @@ import './App.css';
 /* eslint no-eval: 0 */
 
 const App = () => {
+  
   const [result, setResult] = useState("")
-const  handleClick = (e) => {
-    setResult(result.concat(e.target.innerText))
-  }
+
+  const  handleClick = (e) => {
+      setResult(result.concat(e.target.innerText))
+    }
   const clear = () => {
-    setResult("")
-  }
+      setResult("")
+    }
   const backspace = () => {
-    setResult(result.slice(0, -1))
-  }
+      setResult(result.slice(0, -1))
+    }
 
   const calculate = () => {
-    try {
-      if (result === "") {
-        setResult("Empty!");
-        setTimeout( () => setResult(""), 
-          1000
-        );
-        
-      } else {
-        setResult(eval(result).toString()) ;
-      }} catch {
-      setResult("Error")
-     }
-   }
+      try {
+        if (result === "") {
+          setResult("Empty!");
+          setTimeout( () => setResult(""), 
+            1000
+          );
+          
+        } else {
+          setResult(eval(result).toString()) ;
+        }} catch {
+        setResult("Error")
+      }
+    }
   
 
   return (
@@ -53,7 +55,7 @@ const  handleClick = (e) => {
                 <div class="button operator" onClick={handleClick}>+</div>
                 <div class="button number" onClick={handleClick}>0</div>
                 <div class="button number" onClick={handleClick}>.</div>
-                <div id="equal" class="button" onClick={calculate}>=</div>
+                <div class="button" id="equal" onClick={calculate}>=</div>
             </div>
         </div>
     </>
