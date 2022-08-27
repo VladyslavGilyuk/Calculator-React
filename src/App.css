@@ -13,7 +13,7 @@ html {
 body {
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background: linear-gradient(white, #9198e5);    
+  background: linear-gradient(to top, white, #9198e5);    
 }
 
 
