@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 const App = () => {
@@ -15,9 +15,12 @@ const  handleClick = (e) => {
 
   const calculate = () => {
     try {
-      if (result == "") {
+      if (result === "") {
         setResult("Empty!");
-        setTimeout (() => (setResult(""), 5000));
+        setTimeout( () => setResult(""), 
+          1000
+        );
+        
       } else {
         setResult(eval(result).toString()) ;
       }} catch {
