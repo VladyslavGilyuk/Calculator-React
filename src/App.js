@@ -29,6 +29,9 @@ const App = () => {
           setResult(eval(result).toString()) ;
         }} catch {
         setResult("Error")
+        setTimeout( () => setResult(""), 
+            1000
+          );
       }
     }
   
