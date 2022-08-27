@@ -1,24 +1,57 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [result, setResult] = useState("")
+const  handleClick = (e) => {
+    setResult(result.concat(e.target.innerText))
+  }
+  const clear = () => {
+    setResult("")
+  }
+  const backspace = () => {
+    setResult(result.slice(0, -1))
+  }
+
+  const calculate = () => {
+    try {
+      if (result == "") {
+        setResult("Empty!");
+        setTimeout (() => (setResult(""), 5000));
+      } else {
+        setResult(eval(result).toString()) ;
+      }} catch {
+      setResult("Error")
+     }
+   }
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div class="container">
+            <div id="display">{result}</div>
+            <div class="buttons">
+                <div class="button " id="all-clear" onClick={clear}>AC</div>
+                <div class="button operator" onClick={handleClick}>/</div>
+                <div class="button operator" onClick={handleClick}>*</div>
+                <div  class="button number" onClick={handleClick}>7</div>
+                <div class="button number" onClick={handleClick}>8</div>
+                <div class="button number" onClick={handleClick}>9</div>
+                <div class="button operator" id="backspace" onClick={backspace}>←</div>
+                <div class="button number" onClick={handleClick}>4</div>
+                <div class="button number" onClick={handleClick}>5</div>
+                <div class="button number" onClick={handleClick}>6</div>
+                <div class="button operator" onClick={handleClick}>-</div>
+                <div class="button number" onClick={handleClick}>1</div>
+                <div class="button number" onClick={handleClick}>2</div>
+                <div class="button number" onClick={handleClick}>3</div>
+                <div class="button operator" onClick={handleClick}>+</div>
+                <div class="button number" onClick={handleClick}>0</div>
+                <div class="button number" onClick={handleClick}>.</div>
+                <div id="equal" class="button" onClick={calculate}>=</div>
+            </div>
+        </div>
+    </>
   );
 }
 
