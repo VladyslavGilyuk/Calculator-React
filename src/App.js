@@ -1,7 +1,8 @@
 import {useState} from 'react';
 import './App.css';
 
-/* eslint no-eval: 0 */
+/* - Fixing "Eval can be harmful (no-eval)"*/
+/* eslint no-eval: 0 */   
 
 const App = () => {
   /*sets the state of displayed result*/
@@ -43,29 +44,29 @@ const App = () => {
 
   return (
     <>
-      <div class="container">
+      <div className="container">
             {/*Display Section*/}
             <div id="display">{result}</div>
             {/*Buttons Section*/}
-            <div class="buttons">
-              <div class="button " id="all-clear" onClick={clear}>AC</div>
-              <div class="button operator" onClick={handleClick}>/</div>
-              <div class="button operator" onClick={handleClick}>*</div>
-              <div  class="button number" onClick={handleClick}>7</div>
-              <div class="button number" onClick={handleClick}>8</div>
-              <div class="button number" onClick={handleClick}>9</div>
-              <div class="button operator" id="backspace" onClick={backspace}>←</div>
-              <div class="button number" onClick={handleClick}>4</div>
-              <div class="button number" onClick={handleClick}>5</div>
-              <div class="button number" onClick={handleClick}>6</div>
-              <div class="button operator" onClick={handleClick}>-</div>
-              <div class="button number" onClick={handleClick}>1</div>
-              <div class="button number" onClick={handleClick}>2</div>
-              <div class="button number" onClick={handleClick}>3</div>
-              <div class="button operator" onClick={handleClick}>+</div>
-              <div class="button number" onClick={handleClick}>0</div>
-              <div class="button number" onClick={handleClick}>.</div>
-              <div class="button" id="equal" onClick={calculate}>=</div>
+            <div className="buttons">
+              <div className="button " id="all-clear" onClick={clear}>AC</div>
+              <div className="button operator" onClick={handleClick}>/</div>
+              <div className="button operator" onClick={handleClick}>*</div>
+              <div  className="button number" onClick={handleClick}>7</div>
+              <div className="button number" onClick={handleClick}>8</div>
+              <div className="button number" onClick={handleClick}>9</div>
+              <div className="button operator" id="backspace" onClick={backspace}>←</div>
+              <div className="button number" onClick={handleClick}>4</div>
+              <div className="button number" onClick={handleClick}>5</div>
+              <div className="button number" onClick={handleClick}>6</div>
+              <div className="button operator" onClick={handleClick}>-</div>
+              <div className="button number" onClick={handleClick}>1</div>
+              <div className="button number" onClick={handleClick}>2</div>
+              <div className="button number" onClick={handleClick}>3</div>
+              <div className="button operator" onClick={handleClick}>+</div>
+              <div className="button number" onClick={handleClick}>0</div>
+              <div className="button number" onClick={handleClick}>.</div>
+              <div className="button" id="equal" onClick={calculate}>=</div>
             </div>
       </div>
     </>
